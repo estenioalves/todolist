@@ -1,5 +1,6 @@
 package br.com.dio.todolist.UI
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.dio.todolist.databinding.ActivityAddTaskBinding
@@ -58,6 +59,9 @@ class AddTaskActivity : AppCompatActivity(){
                 hour = binding.tilHour.text
             )
             TaskDateSource.insertTask(task)
+
+            setResult(Activity.RESULT_OK)
+            finish()
 
 
         }
